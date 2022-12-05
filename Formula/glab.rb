@@ -25,7 +25,7 @@ class Glab < Formula
     bin.install "bin/glab"
     generate_completions_from_executable(bin/"glab", "completion", "--shell")
   end
-  
+
   test do
     system "git", "clone", "https://gitlab.com/cli-automated-testing/homebrew-testing.git"
     cd "homebrew-testing" do
