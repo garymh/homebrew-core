@@ -27,9 +27,9 @@ class Glab < Formula
   end
 
   test do
-    system "git", "clone", "https://gitlab.com/profclems/test.git"
+    system "git", "clone", "https://gitlab.com/cli-automated-testing/homebrew-testing.git"
     cd "test" do
-      assert_match "Clement Sam", shell_output("#{bin}/glab repo contributors")
+      assert_match "Matt Nohr", shell_output("#{bin}/glab repo contributors")
       assert_match "This is a test issue", shell_output("#{bin}/glab issue list --all")
     end
   end
